@@ -6,13 +6,10 @@ resource "aws_instance" "example" {
   tags = {
     Name = "HelloWorld"  
   }
-}
+} 
 
 resource "aws_s3_bucket" "example" {
   bucket = "my-tf-test-bucket-26-8-2005"
     
-  tags = { 
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
+  tags = var.tags
 }
